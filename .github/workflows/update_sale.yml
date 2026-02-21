@@ -14,15 +14,34 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.11'
+
+# pip更新
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
           
-      - name: Install dependencies
-        run: |
-          # 実行に必要なライブラリをすべてインストール
-          # もし他にも使っているライブラリがあればここに追加してください
-          pip install amazon-paapi supabase requests
+# 依存関係インストール（分割＝原因特定しやすい）
+      - name: Install supabase
+        run: python -m pip install supabase
+
+      - name: Install pandas
+        run: python -m pip install pandas
+
+      - name: Install requests
+        run: python -m pip install requests
+
+      - name: Install Amazon PAAPI
+        run: python -m pip install python-amazon-paapi
+
+      # インストール確認（超重要デバッグ）
+      - name: Check installed packages
+        run: python -m pip list
+
+      # importテスト（ここで落ちたら原因即特定できる）
+      - name: Test import
+        run: python -c "from amazon_paapi import AmazonApi; print('IMPORT SUCCESS')"
           
       - name: Run update script (api.py)
         run: python api.py
