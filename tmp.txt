@@ -1,0 +1,37 @@
+# 認証情報の設定 (ここはご自身のものに)
+access_key = 'AKPA46MKWR1768915366'
+secret_key = 'qRA6+RsuAZ6w9H6/8cMSUdicsz+Jp7hb7h4ZsCqT'
+partner_tag = 'yuzo0a-22' # あなたのアソシエイトID
+country = 'JP' # 日本を指定
+
+amazon = AmazonApi('AKPA46MKWR1768915366', 'qRA6+RsuAZ6w9H6/8cMSUdicsz+Jp7hb7h4ZsCqT', 'yuzo0a-22', 'JP')
+
+Supabase
+PosgreDBPass : Yuito@16130117
+URL = "https://dndowbpxacdncjsoqmlh.supabase.co"
+KEY = "sb_publishable_tc2XxJANYH57uQHLapU2RQ_S1YmGztr"
+
+
+AmazonAPI
+Secret:qRA6+RsuAZ6w9H6/8cMSUdicsz+Jp7hb7h4ZsCqT
+access:AKPA46MKWR1768915366
+tag:yuzo0a-22
+
+python実行順序
+1.qiita_week_connect.py(qiita_manth_connect.py)
+2.asin_search.py
+3.link_create.py
+
+
+
+
+
+# --- 設定項目1: Amazon PA-API (アソシエイト) ---
+AMAZON_ACCESS_KEY = 'AKPA46MKWR1768915366'
+AMAZON_SECRET_KEY = 'qRA6+RsuAZ6w9H6/8cMSUdicsz+Jp7hb7h4ZsCqT'
+PARTNER_TAG = 'yuzo0a-22'
+COUNTRY = 'JP'
+
+# --- 設定項目2: Supabase ---
+SUPABASE_URL = "https://xkwstqnpslfeekifamss.supabase.co"
+SUPABASE_KEY = "sb_publishable_Gn2l2zhfcqpX8Exm0k2CBw_ekXvkEcX"
