@@ -47,7 +47,7 @@ jobs:
 
       # スクリプト実行
       - name: Run Pipeline
-        working-directory: scripts
+        #working-directory: scripts
         run: |
           python api.py
           python sale.py
